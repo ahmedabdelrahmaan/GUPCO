@@ -4,7 +4,7 @@ from PIL import Image
 from Functions import logo
 
 import datetime
-import plotly.figure_factory as ff
+#import plotly.figure_factory as ff
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
