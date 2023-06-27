@@ -3,4 +3,4 @@ Pillow==9.5.0
 Pillow==9.5.0
 plotly==5.14.1
 streamlit==1.22.0
-libtk8.6
+libtk==8.6
