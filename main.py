@@ -88,7 +88,7 @@ if uploaded_file is not None:
             anchor="x",
             overlaying="y",
             side="right"
-        ),
+        ),yaxis3_range=[0,100],
         yaxis4=dict(
             title=y_AXIS4,
             titlefont=dict(
@@ -101,7 +101,7 @@ if uploaded_file is not None:
             overlaying="y",
             side="right",
             position=0.85
-        )
+        ),yaxis3_range=[0,100],
     )
     fig.update_layout(
         title_text="multiple y-axes example",
