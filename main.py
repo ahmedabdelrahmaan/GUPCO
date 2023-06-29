@@ -108,9 +108,9 @@ if uploaded_file is not None:
         width=800,
     )
 
-    fig.update_layout(hovermode="x")
-    fig.update_layout(hovermode="x unified")
-    fig.update_traces(hovertemplate = '<b>%{x:.2f}%'+
+    # fig.update_layout(hovermode="x")
+    # fig.update_layout(hovermode="x unified")
+    fig.update_traces(hovertemplate = '<i>lifeExp</i>: $%{y:.2f}'+
                                         '<i>%{text}</i>',
                       text = ['Your extra variable {}'.format(i) for i in dataframe['comment']])
     st.plotly_chart(fig)
