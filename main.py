@@ -63,7 +63,7 @@ if uploaded_file is not None:
                 color="#1f77b4"
          ,   )
         ),
-        yaxis_range=[dataframe[y_AXIS1].min(),dataframe[y_AXIS1].max()],
+        yaxis_range=[0,10000],
         yaxis2=dict(
             title=y_AXIS2,
             titlefont=dict(
@@ -76,7 +76,7 @@ if uploaded_file is not None:
             overlaying="y",
             side="left",
             position=0.15
-        ),
+        ),yaxis2_range=[0,10000],
         yaxis3=dict(
             title=y_AXIS3,
             titlefont=dict(
