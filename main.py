@@ -46,7 +46,9 @@ if uploaded_file is not None:
     fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS2], name=y_AXIS2, yaxis= 'y2'))
 
     fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS3], name=y_AXIS3, yaxis= 'y3'))
-    fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS4], name=y_AXIS4, yaxis= 'y4'))
+    fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS4], name=y_AXIS4, yaxis= 'y4',hovertemplate =('<i> </i> %{y}')
+                                        +'<br><i>%{text}</i>',
+                      text = ['Your extra variable {}'.format(i) for i in dataframe['comment']]))
 
     # fig.update_traces(line_color='Blue', secondary_y=False)
     # fig.update_traces(line_color='Red', secondary_y=True)
@@ -110,7 +112,7 @@ if uploaded_file is not None:
 
     # fig.update_layout(hovermode="x")
     fig.update_layout(hovermode="x unified")
-    fig.update_traces(hovertemplate =('<i> </i> %{y}')
+    # fig.update_traces(hovertemplate =('<i> </i> %{y}')
                                         +'<br><i>%{text}</i>',
                       text = ['Your extra variable {}'.format(i) for i in dataframe['comment']])
     st.plotly_chart(fig)
