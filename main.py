@@ -110,8 +110,7 @@ if uploaded_file is not None:
 
     # fig.update_layout(hovermode="x")
     fig.update_layout(hovermode="x unified")
-    fig.update_traces(hovertemplate ='<i> a</i>: %{y:.2f}'+
-                                        '<br><i>b </i>: {x}<br>'+'<i>c </i>: %{y:.2f}'+
-                                        '<br><i>d </i>: {x}<br>'+'<br><i>%{text}</i>',
+    fig.update_traces(hovertemplate ='<i> a</i>: %{y:.2f}'
+                                        +'<br><i>%{text}</i>',
                       text = ['Your extra variable {}'.format(i) for i in dataframe['comment']])
     st.plotly_chart(fig)
