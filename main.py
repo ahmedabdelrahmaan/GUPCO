@@ -109,8 +109,5 @@ if uploaded_file is not None:
     )
 
     fig.update_layout(hovermode="x")
-    fig.update_layout(hovermode="x unified",hovertemplate =
-                                        '<i>yaxis</i>: $%{y:.2f}'+
-                                        '<br><i>yaxis2</i>: %{x}<br>'+
-                                        '<i>%{text}</i>',text = ['Your extra variable {}'.format(i) for i in dataframe['comment']])
+    fig.update_layout(hovermode="x unified",hovertemplate ='<i>%{text}</i>',text = ['Your extra variable {}'.format(i) for i in dataframe['comment']])
     st.plotly_chart(fig)
