@@ -41,7 +41,7 @@ if uploaded_file is not None:
         (dataframe.columns))
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
-    fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS1], name=y_AXIS1, yaxis= 'y1',hovertemplate ='<i>%{text}</i>',text = ['Your extra variable {}'.format(i) for i in dataframe['comment']]))
+    fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS1], name=y_AXIS1, yaxis= 'y1'))
  
     fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS2], name=y_AXIS2, yaxis= 'y2'))
 
@@ -110,4 +110,5 @@ if uploaded_file is not None:
 
     fig.update_layout(hovermode="x")
     fig.update_layout(hovermode="x unified")
+    fig.update_traces(hovertemplate ='<i>%{text}</i>',text = ['Your extra variable {}'.format(i) for i in dataframe['comment']])
     st.plotly_chart(fig)
