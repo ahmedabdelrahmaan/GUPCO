@@ -108,8 +108,8 @@ if uploaded_file is not None:
         width=800,
     )
 
-    # fig.update_layout(hovermode="x")
-    fig.update_layout(hovermode="x unified")
+    fig.update_layout(hovermode="x")
+    # fig.update_layout(hovermode="x unified")
     fig.update_traces(hovertemplate ='<i>lifeExp</i>: $%{y:.2f}'+
                                         '<br><i>gdpPercap</i>: %{x}<br>'+'<i>lifeExp</i>: $%{y:.2f}'+
                                         '<br><i>gdpPercap</i>: %{x}<br>'+'<br><i>%{text}</i>',
