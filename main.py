@@ -41,7 +41,8 @@ if uploaded_file is not None:
         (dataframe.columns))
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
-    fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS1], name=y_AXIS1, yaxis= 'y1'),layout_yaxis_range=[0,10000])
+    fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS1], name=y_AXIS1, yaxis= 'y1'))
+ 
     fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS2], name=y_AXIS2, yaxis= 'y2'))
 
     fig.add_trace(go.Scatter(x=dataframe[X_AXIS], y=dataframe[y_AXIS3], name=y_AXIS3, yaxis= 'y3'))
@@ -60,8 +61,9 @@ if uploaded_file is not None:
             ),
             tickfont=dict(
                 color="#1f77b4"
-            )
+         ,   )
         ),
+        yaxis_range=[-4,4],
         yaxis2=dict(
             title=y_AXIS2,
             titlefont=dict(
